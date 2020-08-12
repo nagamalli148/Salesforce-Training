@@ -1,0 +1,150 @@
+# Creating Objects
+Adding 
+-Courses
+-Trainers
+-Custom fields
+-Another userields
+->Schema Builder->Adding Fields
+->Adding Profiles
+
+Today's Agenda
+
+->Salesforce Project Discussion
+->Data Model and use case Discussion
+->Introduction to standard APP,Custome APP,Customer Objects
+->Create Custom App,Custom Object,Custom Fields
+->Intriduction to schema Builder,Page Laout Customerization
+->User Registration,Profile Management,Role Management
+
+In salesforce.com data is an organized collection of objects.
+The term object referes to information.We use database tabkes  to collect or store the information about the things,peopleor concepts that are important 
+
+Salesforce database structure:
+->Standard objects-Predefined
+->Custom Objects -created by users according to their need
+->External objects -Custom obj which are used to mao the data stored outside your organization.
+
+The information in the table is stored as rows and columns
+
+->Creating Developer Account 
+signup and go to My developer account from the profile 
+
+Go to APP Launcher->view all->which shows existing applications
+
+New Lightning App:
+->Developer Name 
+eg:Sample Learning App
+app name will be standard Sample_Learning_App
+image -> logo (Exporting )
+
+APP launcher->view all ->Sample Learning APP
+
+Primary colour ->we can change
+APP->Next->Add utilit items
+
+//Creating an Object Manager
+Object Manager
+
+Label	
+Course
+  Example:  Account
+*Plural Label	
+Courses
+  Example:  Accounts
+
+Enter Record Name Label and Format
+Record Name:Course ID
+Data Type:Auto Number 
+Auto geerated
+display format- C-{00000}
+starting number - 1 
+
+Deployment Status
+->In Development
+->Deployed
+
+Select all
+click on Save
+
+Tabs->Next-Next(By default on-who all can access)
+Section 3 is very Important which is about Application Management select all -> save
+
+API Name: Course_Name__c
+Sales force automatically fixes the standard
+
+How to add custome fields:
+--------------------------
+->1.Get to the object manager->Fields and relationships->New button-List of fields->Select Text->
+New Custom Field
+->Course Name
+->Length-100
+->Field Name:Course_Name
+Required->Always require a value in this field in order to save a record
+->Next
+Filed Level Security->Which use can access->Next->Save
+
+Course Fee
+->New->Currency
+Name:Course_Fee
+Length:6
+Decimal:0
+Make it Required->Next-Next->Save
+
+Course Category
+
+I want user to select like a drop down
+
+New->Field->Pick List->Next
+Label:COurse Category
+Enter values with each
+Cloud Computing
+Web Development
+Linux Administration
+Graphical Designing
+
+Add courses->Required->Next->Next->save
+
+Again a Picklist
+New->Pick List->Next->Values->
+20
+12
+3
+5
+6
+Next->Next->Save
+
+Page Layouts
+Move the fields to the right and click on save
+
+Schema Builder- useful while creating objects
+
+New Custom Object
+Name:Trainer ID
+autonumber
+T-{00000}
+starting number:1
+
+Do not check this option for this for now!
+
+When we click on courses we can find notes and attachments
+Check allow search and launch new custom tab wizard.
+Add Notes and Attachments related list to default page layout
+
+Object is not added in the tab list how can i use then 
+->Click on Home
+->Search for Tabs
+->custom Object Tabs ->New button->can select the style and next->next->select all->save
+
+
+We can use Schema Builder and add the elements by drag and drop but after adding when we refresh these when i click on edit other fields are not coming since they are not required fields this is the drawback.If we don't add a field as required it won't be available.
+
+Trainer->Page Layout->Drag and Drop the sections
+
+How to add Users
+->Home->Users->
+First Name,Lastname,email id of that user account,Nick Name user1234,This User belongs to which region (eg:English),Local settings:Lang:English ->save
+
+Mail will be received to that user.Being ane Administrator I want to give permission to the that user.
+Standard User->Giving Permissions
+
+From now onwards another user also can create and add courses as showing as he is the owner.
